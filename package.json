@@ -1,0 +1,15 @@
+{
+  "name": "@hexlet/code",
+  "version": "7.7.7",
+  "description": "voshititelniy project pro ugri ot nashego kruteyshego prepoda klimentiya",
+  "main": "index.js",
+  "type": "module",
+
+  "scripts": {
+    "test": ""
+  },
+  "author": "dysh3s",
+  "license": "ISC"
+}
+
+
