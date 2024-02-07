@@ -9,15 +9,16 @@ const brainEven = () => {
     console.log(`Question: ${firstNumber}`)
     let i = ['yes', 'no']
     i = readlineSync.question('your answer:')
-    if (i === 'yes') {
-        i = 0
+    let correctAnswer = i === firstNumber % 2
+    if (correctAnswer === true) {
+        correctAnswer = ('yes');
     }
-    if (i === 'no') {
-        i = 1
+    else {
+        correctAnswer = ('no');
     }
     if (i === firstNumber % 2) {
         console.log('Correct!');
-    }else{
+    } else {
         console.log(`${i} is wrong answer Let's try again, ${name}`);
     }
 }
