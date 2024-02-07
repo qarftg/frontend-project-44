@@ -4,12 +4,20 @@
   "description": "voshititelniy project pro ugri ot nashego kruteyshego prepoda klimentiya",
   "main": "index.js",
   "type": "module",
-
+  "bin": {
+    "brain-games": "bin/brain-games.js",
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
+  },
   "scripts": {
     "test": ""
   },
   "author": "dysh3s",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "readline-sync": "^1.4.10"
+  }
 }
-
-
