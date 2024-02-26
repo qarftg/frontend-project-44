@@ -1,21 +1,21 @@
 #!/usr/bin/env node
-import readlineSync from "readline-sync";
-import user, { name } from "../src/cli.js";
+import readlineSync from 'readline-sync';
+import user, { name } from '../src/cli.js';
 
 user();
-console.log("What is the result of the expression?");
+console.log('What is the result of the expression?');
 
 const generateRandomNumber = () => Math.floor(Math.random() * 100);
 const generateRandomOperator = () =>
-    ["+", "-", "*"][Math.floor(Math.random() * 3)];
+    ['+', '-', '*'][Math.floor(Math.random() * 3)];
 
 const calculateExpression = (num1, operator, num2) => {
     switch (operator) {
-        case "+":
+        case '+':
             return num1 + num2;
-        case "-":
+        case '-':
             return num1 - num2;
-        case "*":
+        case '*':
             return num1 * num2;
         default:
             return null;
@@ -30,11 +30,11 @@ while (correctAnswersCount < 3) {
     const operator = generateRandomOperator();
 
     console.log(`Question: ${num1} ${operator} ${num2}`);
-    const userAnswer = readlineSync.question("Your answer: ");
+    const userAnswer = readlineSync.question('Your answer: ');
     const correctAnswer = calculateExpression(num1, operator, num2);
 
     if (Number(userAnswer) === correctAnswer) {
-        console.log("Correct!");
+        console.log('Correct!');
         correctAnswersCount += 1;
     } else {
         console.log(

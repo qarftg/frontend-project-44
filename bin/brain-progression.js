@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-import user from "../src/cli.js";
-import readlineSync from "readline-sync";
-import { name } from "../src/cli.js";
+import user from '../src/cli.js';
+import readlineSync from 'readline-sync';
+import { name } from '../src/cli.js';
 
 const generateProgression = (start, step, length) => {
     const progression = [];
@@ -18,7 +18,7 @@ const generateProgression = (start, step, length) => {
 const playBrainProgression = () => {
     user();
 
-    console.log("What number is missing in the progression?");
+    console.log('What number is missing in the progression?');
 
     let i = 0;
     while (i < 3) {
@@ -28,13 +28,13 @@ const playBrainProgression = () => {
         const progression = generateProgression(start, step, length);
         const hiddenIndex = Math.floor(Math.random() * length);
         const correctAnswer = progression[hiddenIndex];
-        progression[hiddenIndex] = "..";
+        progression[hiddenIndex] = '..';
 
-        console.log(`Question: ${progression.join(" ")}`);
-        const userAnswer = readlineSync.question("Your answer: ");
+        console.log(`Question: ${progression.join(' ')}`);
+        const userAnswer = readlineSync.question('Your answer: ');
 
         if (parseInt(userAnswer, 10) === correctAnswer) {
-            console.log("Correct!");
+            console.log('Correct!');
             i += 1;
         } else {
             console.log(

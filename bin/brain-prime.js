@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-import user from "../src/cli.js";
-import getRandomInt from "../src/utilities.js";
-import readlineSync from "readline-sync";
-import { name } from "../src/cli.js";
+import user from '../src/cli.js';
+import getRandomInt from '../src/utilities.js';
+import readlineSync from 'readline-sync';
+import { name } from '../src/cli.js';
 
 user();
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -13,10 +13,10 @@ let counter = 0;
 const isPrime = (num) => {
     for (let a = 2; a < num; a += 1) {
         if (num % a === 0) {
-            return "no";
+            return 'no';
         }
     }
-    return "yes";
+    return 'yes';
 };
 const getPrimeGame = () => {
     const j = [];
@@ -29,9 +29,9 @@ const getPrimeGame = () => {
     }
     const correctAnswer = isPrime(num1);
     console.log(`Question: ${num1}`);
-    r = readlineSync.question("Your answer: ");
+    r = readlineSync.question('Your answer: ');
     if (r === correctAnswer) {
-        console.log("Correct!");
+        console.log('Correct!');
         counter += 1;
     } else {
         console.log(
