@@ -6,7 +6,7 @@ user();
 
 let counter = 0;
 let win = false;
-export const isEven = () => {
+const isEven = () => {
 console.log('Answer "yes" if the number is even, otherwise answer "no"');
 const random = Math.floor(Math.random() * 100);
 
@@ -42,4 +42,4 @@ win = true;
 }
 };
 isEven();
-
+export default isEven;
