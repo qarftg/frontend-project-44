@@ -6,7 +6,7 @@ import readlineSync from 'readline-sync';
 const firstNumber = getRandomInt();
 const brainEven = () => {
     user()
-    console.log('answer "yes" if the number is even, otherwise answer "no".')
+    console.log('Answer "yes" if the number is even, otherwise answer "no".')
     console.log(`Question: ${firstNumber}`)
     let i = ['yes', 'no']
     i = readlineSync.question('your answer:')
