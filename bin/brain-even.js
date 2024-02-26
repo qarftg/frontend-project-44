@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import user from '../src/cli.js'
 import getRandomInt from '../src/utilities.js';
 import { name } from '../src/cli.js';
