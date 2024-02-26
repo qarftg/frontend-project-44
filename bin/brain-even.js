@@ -1,13 +1,11 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-// eslint-disable-next-line import/no-named-as-default
 import { name } from '../src/cli.js';
 import  user from '../src/cli.js';
 user();
 
 let counter = 0;
 let win = false;
-// eslint-disable-next-line import/prefer-default-export
 export const isEven = () => {
 console.log('Answer "yes" if the number is even, otherwise answer "no"');
 const random = Math.floor(Math.random() * 100);

@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 import user from "../src/cli.js";
-import getRandomInt from "../src/utilities.js";
 import readlineSync from "readline-sync"
 import { name } from '../src/cli.js';
 
