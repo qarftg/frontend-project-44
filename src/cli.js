@@ -5,5 +5,7 @@ const user = () => {
     name = readlineSync.question('May I have your name? ');
     console.log(`Hello, ${name}!`);
 }
-export {name}
+const getRandomInt = (max = 100) => Math.floor(Math.random() * max);
+
+export { name, getRandomInt}
 export default user;
