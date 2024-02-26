@@ -6,9 +6,7 @@ user();
 console.log('What is the result of the expression?');
 
 const generateRandomNumber = () => Math.floor(Math.random() * 100);
-const generateRandomOperator = () =>
-  ['+', '-', '*'][Math.floor(Math.random() * 3)];
-
+const generateRandomOperator = () => ['+', '-', '*'][Math.floor(Math.random() * 3)];
 const calculateExpression = (num1, operator, num2) => {
   switch (operator) {
     case '+':
