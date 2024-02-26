@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import name from '../src/cli.js';
+import { name } from '../src/cli.js';
 import user from '../src/cli.js';
 user();
 
