@@ -37,9 +37,7 @@ const playBrainProgression = () => {
       console.log('Correct!');
       i += 1;
     } else {
-      console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`
-      );
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
       return;
     }
   }

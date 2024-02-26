@@ -21,9 +21,7 @@ while (correctAnswersCount < 3) {
     console.log('Correct!');
     correctAnswersCount += 1;
   } else {
-    console.log(
-      `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
-    );
+    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
     console.log(`Let's try again, ${name}!`);
     break;
   }

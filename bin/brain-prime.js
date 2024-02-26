@@ -34,9 +34,7 @@ const getPrimeGame = () => {
     console.log('Correct!');
     counter += 1;
   } else {
-    console.log(
-      `'${r}' is wrong answer ;(. Correct answer was '${correctAnswer}'`
-    );
+    console.log(`'${r}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
     console.log(`Let's try again, ${name}!`);
     return;
   }
