@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 let name;
-const user = () => {
+const  user = () => {
     console.log("Welcome to the Brain Games!")
     name = readlineSync.question('May I have your name? ');
     console.log(`Hello, ${name}!`);
@@ -16,5 +16,5 @@ const getGreatestCommonDivisor = (num1, num2) => {
     return arr[arr.length - 1];
   };
 
-export { name, getGreatestCommonDivisor}
+export { name, getGreatestCommonDivisor};
 export default user;
