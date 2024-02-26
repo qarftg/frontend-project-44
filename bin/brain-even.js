@@ -7,7 +7,7 @@ user();
 let counter = 0;
 let win = false;
 const isEven = () => {
-    console.log('Answer "yes" if the number is even, otherwise answer "no"');
+  console.log('Answer "yes" if the number is even, otherwise answer "no"');
     const random = Math.floor(Math.random() * 100);
 
     console.log(`Question: ${random}`);
