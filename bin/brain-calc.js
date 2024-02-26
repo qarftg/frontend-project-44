@@ -6,7 +6,9 @@ user();
 console.log('What is the result of the expression?');
 
 const generateRandomNumber = () => Math.floor(Math.random() * 100);
-const generateRandomOperator = () => ['+', '-', '*'][Math.floor(Math.random() * 3)];
+const generateRandomOperator = () => {
+  ['+', '-', '*'][Math.floor(Math.random() * 3)];
+};
 const calculateExpression = (num1, operator, num2) => {
   switch (operator) {
     case '+':
@@ -36,8 +38,8 @@ while (correctAnswersCount < 3) {
     correctAnswersCount += 1;
   } else {
     console.log(
-      `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
-        );
+      `${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}.`
+    );
     console.log(`Let's try again, ${name}!`);
     break;
   }
