@@ -1,42 +1,47 @@
 #!/usr/bin/env node
-import user from "../src/cli.js";
-import getRandomInt from "../src/utilities.js";
-import readlineSync from "readline-sync"
-import { name } from '../src/cli.js';
-user()
-let r;
-const calc = () => {
-    const opers = ['*', '/', '+', '-'];
-    const ranop = getRandomInt(opers.length)
-    let num1 = getRandomInt()
-    let num2 = getRandomInt()
-    let result = undefined;
-    switch (ranop) {
-        case 0:
-            console.log(`${num1} * ${num2}`);
-            result = num1 * num2
-            break
-        case 1:
-            console.log(`${num1} / ${num2}`);
-            result = num1 / num2
-            break
-        case 2:
-            console.log(`${num1} + ${num2}`);
-            result = num1 + num2
-            break
-        case 3:
-            console.log(`${num1} - ${num2}`);
-            result = num1 - num2
-            break
-    }
-    console.log('What is the result of the expression?');
-    r = readlineSync.question('answer: ')
-    if (+r === result ) {
-        console.log('correct');
-    } else {
-        console.log(`${r} is wrong answer, Let's try again, ${name}`);
-    }
-    console.log(`correct answer: ${result}`);
+import readlineSync from 'readline-sync';
+import user, { name } from '../src/cli.js';
+
+user();
+console.log('What is the result of the expression?');
+
+const generateRandomNumber = () => Math.floor(Math.random() * 100);
+const generateRandomOperator = () => ['+', '-', '*'][Math.floor(Math.random() * 3)];
+
+const calculateExpression = (num1, operator, num2) => {
+  switch (operator) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
+    default:
+      return null;
+  }
+};
+
+let correctAnswersCount = 0;
+
+while (correctAnswersCount < 3) {
+  const num1 = generateRandomNumber();
+  const num2 = generateRandomNumber();
+  const operator = generateRandomOperator();
+
+  console.log(`Question: ${num1} ${operator} ${num2}`);
+  const userAnswer = readlineSync.question('Your answer: ');
+  const correctAnswer = calculateExpression(num1, operator, num2);
+
+  if (Number(userAnswer) === correctAnswer) {
+    console.log('Correct!');
+    correctAnswersCount += 1;
+  } else {
+    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+    console.log(`Let's try again, ${name}!`);
+    break;
+  }
 }
-calc()
-export default calc; 
+
+if (correctAnswersCount === 3) {
+  console.log(`Congratulations, ${name}!`);
+}
