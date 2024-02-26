@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import user, { name, getRandomInt } from '../src/cli.js';
+import user, { name, getGreatestCommonDivisor } from '../src/cli.js';
 
 user();
 console.log('Find the greatest common divisor of given numbers.');
@@ -15,7 +15,7 @@ while (correctAnswersCount < 3) {
 
   console.log(`Question: ${num1} ${num2}`);
   const userAnswer = readlineSync.question('Your answer: ');
-  const correctAnswer = getRandomInt(num1, num2);
+  const correctAnswer = getGreatestCommonDivisor(num1, num2);
 
   if (+userAnswer === correctAnswer) {
     console.log('Correct!');
