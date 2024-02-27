@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import user from '../src/cli.js';
 import readlineSync from 'readline-sync';
+import user from '../src/cli.js';
 
 const generateProgression = (start, step, length) => {
   const progression = [];

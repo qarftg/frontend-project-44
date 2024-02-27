@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import user from '../src/cli.js';
-import getGreatestCommonDivisor from '../src/prime.js'
+import getGreatestCommonDivisor from '../src/prime.js';
 
 const name = user();
 console.log('Find the greatest common divisor of given numbers.');

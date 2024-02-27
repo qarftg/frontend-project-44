@@ -1,7 +1,7 @@
 #!/usr/bin/env node
+import readlineSync from 'readline-sync';
 import user from '../src/cli.js';
 import getRandomInt from '../src/utilities.js';
-import readlineSync from 'readline-sync';
 
 const name = user();
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
