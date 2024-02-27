@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import user, { name } from '../src/cli.js';
+import user from '../src/cli.js';
 
-user();
+const name = user();
 console.log('What is the result of the expression?');
 
 const generateRandomNumber = () => Math.floor(Math.random() * 100);

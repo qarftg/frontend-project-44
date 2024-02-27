@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { name } from '../src/cli.js';
 import user from '../src/cli.js';
 
-user();
+const name = user();
 
 let counter = 0;
 let win = false;

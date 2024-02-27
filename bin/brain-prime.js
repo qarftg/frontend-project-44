@@ -2,9 +2,8 @@
 import user from '../src/cli.js';
 import getRandomInt from '../src/utilities.js';
 import readlineSync from 'readline-sync';
-import { name } from '../src/cli.js';
 
-user();
+const name = user();
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 console.log(rule);
 

@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 import user from '../src/cli.js';
 import readlineSync from 'readline-sync';
-import { name } from '../src/cli.js';
 
 const generateProgression = (start, step, length) => {
   const progression = [];
@@ -16,7 +15,7 @@ const generateProgression = (start, step, length) => {
 };
 
 const playBrainProgression = () => {
-  user();
+  const name = user();
 
   console.log('What number is missing in the progression?');
 

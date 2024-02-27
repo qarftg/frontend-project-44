@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import user, { name, getGreatestCommonDivisor } from '../src/cli.js';
+import user from '../src/cli.js';
+import getGreatestCommonDivisor from '../src/prime.js'
 
-user();
+const name = user();
 console.log('Find the greatest common divisor of given numbers.');
 
 const generateRandomNumber = () => Math.floor(Math.random() * 100) + 1;
