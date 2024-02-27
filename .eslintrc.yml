@@ -6,4 +6,3 @@ parserOptions:
   ecmaVersion: latest
   sourceType: module
 rules: { "no-console": "off", "import/extensions": "off" }
-indent: ["error", 4]
